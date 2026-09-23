@@ -67,4 +67,33 @@ function gerarSaudacao() {
         return "Boa noite!";
     }
 }
+
+function formatarTelefone($telefone) {
+    $telefone = preg_replace('/\D/', '', $telefone);
+
+    return '(' . substr($telefone, 0, 2) . ') ' .
+           substr($telefone, 2, 5) . '-' .
+           substr($telefone, 7, 4);
+}
+
+function validarSenhaForte($senha) {
+    if (strlen($senha) < 8) {
+        return false;
+    }
+
+    if (!preg_match('/[A-Z]/', $senha)) {
+        return false;
+    }
+
+    if (!preg_match('/[a-z]/', $senha)) {
+        return false;
+    }
+
+    if (!preg_match('/[0-9]/', $senha)) {
+        return false;
+    }
+
+    return true;
+}
+
 ?>
