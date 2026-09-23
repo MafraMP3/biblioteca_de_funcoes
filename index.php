@@ -111,8 +111,8 @@ if (isset($_POST['calcularIdade'])) {
 <h3>7. Converter Moeda</h3>
 
 <form method="POST">
-    <input type="number" name="valor" step="0.01" placeholder="Valor em reais" required>
-    <input type="number" name="cotacao" step="0.01" placeholder="dolar = 5,17" required>
+    <input type="number" name="valor" step="1" placeholder="Valor em reais" required>
+    <input type="number" name="cotacao" step="1" placeholder="dolar = 5,17" required>
     <button type="submit" name="converterMoeda">Converter</button>
 </form>
 
