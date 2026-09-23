@@ -57,14 +57,15 @@ function converterMoeda($valor, $cotacao) {
 
 
 function gerarSaudacao() {
+    date_default_timezone_set('America/Sao_Paulo');
     $hora = date('H');
-
+    echo "Agora são $hora horas.";
     if ($hora >= 5 && $hora < 12) {
-        return "Bom dia!";
+        return "Bom dia";
     } elseif ($hora >= 12 && $hora < 18) {
-        return "Boa tarde!";
+        return "Boa tarde";
     } else {
-        return "Boa noite!";
+        return "Boa noite";
     }
 }
 
